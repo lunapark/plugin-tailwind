@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@luna-park/plugin':
-        specifier: link:..\core\packages\plugin
-        version: link:../core/packages/plugin
+        specifier: ^1.0.1
+        version: 1.0.1(vue@3.5.23(typescript@5.9.3))
       vue:
         specifier: ^3.5.23
         version: 3.5.23(typescript@5.9.3)
@@ -315,6 +315,11 @@ packages:
 
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
+
+  '@luna-park/plugin@1.0.1':
+    resolution: {integrity: sha512-vGBoMZR0+cC20qjac1kDf6tqnXUOUADxvTWihYlJklcaN4iiVaU7SYbVN1FlZ3nI2V6EyZ0NAtjmqn9ZDk9rFQ==}
+    peerDependencies:
+      vue: ^3.5.23
 
   '@napi-rs/wasm-runtime@0.2.12':
     resolution: {integrity: sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ==}
@@ -1466,6 +1471,10 @@ snapshots:
       '@isaacs/balanced-match': 4.0.1
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
+
+  '@luna-park/plugin@1.0.1(vue@3.5.23(typescript@5.9.3))':
+    dependencies:
+      vue: 3.5.23(typescript@5.9.3)
 
   '@napi-rs/wasm-runtime@0.2.12':
     dependencies:
