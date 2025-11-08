@@ -1,8 +1,13 @@
 {
   "name": "@luna-park/plugin-tailwind",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "Tailwind CSS plugin for Luna Park",
+  "keywords": [
+    "luna-park",
+    "tailwind",
+    "plugin"
+  ],
   "homepage": "https://luna-park.app",
   "repository": {
     "type": "git",
