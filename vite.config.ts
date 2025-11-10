@@ -1,15 +1,15 @@
-import { defineConfig, type UserConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+import { defineConfig, type UserConfig } from "vite";
 import cssInjectedByJs from "vite-plugin-css-injected-by-js";
 
 export default defineConfig(() => {
     const config: UserConfig = {
         build: {
             lib: {
-                name: "@luna-park/plugin-tailwind",
                 entry: "src/index.ts",
                 fileName: "index",
-                formats: ["es"]
+                formats: ["es"],
+                name: "@luna-park/plugin-tailwind"
             },
             rollupOptions: {
                 external: ["vue"]
