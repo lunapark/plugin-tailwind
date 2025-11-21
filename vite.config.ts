@@ -1,6 +1,6 @@
-import vue from "@vitejs/plugin-vue";
 import { defineConfig, type UserConfig } from "vite";
-import cssInjectedByJs from "vite-plugin-css-injected-by-js";
+
+import packageDefinition from "./package.json" with { type: "json" };
 
 export default defineConfig(() => {
     const config: UserConfig = {
@@ -12,17 +12,9 @@ export default defineConfig(() => {
                 name: "@luna-park/plugin-tailwind"
             },
             rollupOptions: {
-                external: ["vue"]
+                external: [...Object.keys(packageDefinition.peerDependencies || {})]
             }
         },
-        plugins: [
-            vue(),
-            cssInjectedByJs({
-                dev: {
-                    enableDev: true
-                }
-            })
-        ],
         preview: {
             allowedHosts: [
                 "localhost",
